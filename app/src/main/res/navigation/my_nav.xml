@@ -18,6 +18,7 @@
             app:destination="@id/secondFragment"
             app:enterAnim="@android:anim/slide_in_left"
             app:exitAnim="@android:anim/slide_out_right"
+            tools:layout="@layout/fragment_first"
             />
     </fragment>
 
@@ -33,6 +34,11 @@
             app:destination="@id/firstFragment"
             app:enterAnim="@anim/nav_default_enter_anim"
             app:exitAnim="@anim/nav_default_exit_anim"
+            />
+        <argument
+            android:name="number"
+            android:defaultValue="2"
+            app:argType="integer"
             />
     </fragment>
 </navigation>

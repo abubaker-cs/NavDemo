@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import org.abubaker.navdemo.R
 import org.abubaker.navdemo.databinding.FragmentFirstBinding
 
 
@@ -26,7 +25,9 @@ class FirstFragment : Fragment() {
         binding.apply {
 
             labelOne.setOnClickListener {
-                findNavController().navigate(R.id.navigateToSecondFragment)
+                val action = FirstFragmentDirections.navigateToSecondFragment(25)
+
+                findNavController().navigate(action)
             }
 
         }
